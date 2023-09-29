@@ -1,0 +1,274 @@
+:root {
+  --background: #fefefe;
+  --header: #051821;
+  --gradient-start: #fc575e;
+  --gradient-end: #f7b42c;
+  --gradient-middle: #fa8645;
+  --light-gray: #d8d8d6;
+  --medium-gray: #7e7e7e;
+  --dark-gray: #555555;
+  --gray-gradient-start: #4e4e4e;
+  --gray-gradient-end: #353535;
+  --pure-white: #ffffff;
+  --pure-black: #000000;
+  --green: #60d394;
+  --red: #ee6055;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--header);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 32.5px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.hide {
+  display: none;
+}
+
+.show-block {
+  display: block;
+}
+
+.body {
+  width: 100%;
+  display: flex;
+  background-color: var(--background);
+  height: 100vh;
+}
+
+.home-main {
+  background: var(--background);
+  height: 100vh;
+  width: 75%;
+  padding: 10px;
+  box-sizing: border-box;
+  padding: 70px 130px 70px 130px;
+}
+
+.home-side {
+  background: linear-gradient(
+    135deg,
+    var(--gray-gradient-start) 0%,
+    var(--gray-gradient-end) 100%
+  );
+  height: 100vh;
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.home-courses-header {
+  display: flex;
+  align-items: center;
+}
+
+.home-courses-h2 {
+  padding: 40px 0px;
+  width: 60%;
+  margin-right: 25%;
+}
+
+.gray-button {
+  border-radius: 100px;
+  background: var(--light-gray);
+  width: 150px;
+  height: 50px;
+  padding: none;
+  margin: none;
+  border: none;
+  color: var(--header);
+  font-size: 17px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.gray-button:hover {
+  cursor: pointer;
+  background: var(--medium-gray);
+  transition: 400ms;
+  color: var(--background);
+}
+
+.gray-button:not(hover) {
+  background: var(--light-gray);
+  transition: 400ms;
+  color: var(--header);
+}
+
+.home-recent-courses {
+  display: flex;
+  align-items: center;
+}
+
+.course-card {
+  width: 350px;
+  height: 110px;
+  margin-right: 50px;
+  border-radius: 15px;
+  background: var(--pure-white);
+  box-shadow: 5px 10px 20px var(--light-gray);
+  padding: 40px;
+}
+
+.course-name {
+  color: var(--gradient-middle);
+}
+
+.course-language {
+  color: var(--dark-gray);
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.course-complete {
+  color: var(--medium-gray);
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.course-card:hover {
+  cursor: pointer;
+  transition: 400ms;
+  transform: scale(1.07);
+  box-shadow: 10px 20px 40px var(--light-gray);
+}
+
+.course-card:not(hover) {
+  background: var(--pure-white);
+  transition: 400ms;
+  transform: scale(1);
+  box-shadow: 5px 10px 20px var(--light-gray);
+}
+
+.new-course-h2 {
+  padding: 40px 0px 20px 0px;
+}
+
+.new-course-language-h3,
+.new-course-name,
+.new-course-vocab-list-h3 {
+  margin-bottom: 15px;
+}
+
+.new-course-language-select,
+.new-course-name-input,
+.new-course-vocab-input {
+  width: 350px;
+  height: 55px;
+  border-radius: 100px;
+  background: var(--light-gray);
+  border: none;
+  color: var(--gray-gradient-end) !important;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 25px;
+}
+
+.new-course-name-input::placeholder {
+  color: var(--gray-gradient-end) !important;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 5px;
+}
+
+input[type="text"]:focus::placeholder {
+  border: none;
+  color: var(--pure-white) !important;
+  transition: 500ms;
+}
+
+.new-course-language-select:focus,
+.new-course-name-input:focus,
+.new-course-vocab-input:focus {
+  background-color: var(--medium-gray);
+  color: var(--pure-white) !important;
+  transition: 500ms;
+}
+
+.new-course-top-row {
+  display: flex;
+  align-items: center;
+}
+
+.new-course-language {
+  margin-right: 135px;
+}
+
+.new-course-vocab-list-h3 {
+  margin-top: 40px;
+  margin-bottom: 7.5px;
+}
+
+.new-course-vocab-list-description {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.new-course-vocab-input {
+  width: 95%;
+}
+
+.gradient-button {
+  border-radius: 100px;
+  background: linear-gradient(90deg, #fc575e 0%, #f7b42c 100%);
+  border: none;
+  color: var(--pure-white);
+}
+
+.gradient-button:hover {
+  cursor: pointer;
+  font-size: 25px;
+  transition: 400ms;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transform: scale(1.05);
+}
+
+.gradient-button:not(hover) {
+  transition: 400ms;
+  box-shadow: none;
+  transform: scale(1);
+}
+
+.new-course-submit {
+  width: 484px;
+  height: 62px;
+  font-size: 23px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.new-course-submit-row {
+  text-align: center;
+  align-items: center;
+}
+
+.new-course-form {
+  width: 70%;
+}
