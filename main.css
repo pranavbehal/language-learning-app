@@ -46,10 +46,12 @@ p {
 
 .hide {
   display: none;
+  transition: 400ms linear;
 }
 
 .show-block {
   display: block;
+  transition: 400ms;
 }
 
 .body {

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="lesson.css" />
+
+    <script src="lesson.js" defer></script>
+
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="lesson-content-all">
+      <div class="lesson-top-div">
+        <div class="lesson-stats">
+          <h1 class="lesson-course-name-h1">Course Name</h1>
+          <div class="lesson-complete-div">
+            <h2 class="lesson-complete-h2">0%</h2>
+            <p class="lesson-complete-p">Complete</p>
+          </div>
+          <div class="lesson-accuracy-div">
+            <h2 class="lesson-accuracy-h2">0%</h2>
+            <p class="lesson-accuracy-p">Accuracy</p>
+          </div>
+        </div>
+      </div>
+      <div class="lesson-bottom-div">
+        <div class="quizzes"></div>
+      </div>
+    </div>
+    <div class="quiz-content">
+      <div class="quiz-question">
+        <p class="question-counter">Question 2 of 10</p>
+        <h2 class="question-text">Which word translates to hello?</h2>
+        <div class="quiz-answer-choices">
+          <div class="quiz-answer" id="quiz-answer-1">
+            <div class="question-answer-1-icon question-answer-icon">
+              <p class="question-number-p">1</p>
+            </div>
+            <div class="question-answer-text-container">
+              <p class="question-answer-text question-answer-text-1">Hola</p>
+            </div>
+          </div>
+          <div class="quiz-answer" id="quiz-answer-2">
+            <div class="question-answer-2-icon question-answer-icon">
+              <p class="question-number-p">2</p>
+            </div>
+            <p class="question-answer-text question-answer-text-2">Querer</p>
+          </div>
+          <div class="quiz-answer" id="quiz-answer-3">
+            <div class="question-answer-3-icon question-answer-icon">
+              <p class="question-number-p">3</p>
+            </div>
+            <p class="question-answer-text question-answer-text-3">Tengo</p>
+          </div>
+          <div class="quiz-answer" id="quiz-answer-4">
+            <div class="question-answer-4-icon question-answer-icon">
+              <p class="question-number-p">4</p>
+            </div>
+            <p class="question-answer-text question-answer-text-4">Dos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="quiz-sticky-info-bottom">
+      <div class="quiz-sticky-correct-container">
+        <div class="quiz-sticky-correct-info">
+          <h3 class="quiz-sticky-correct-h3">Correct!</h3>
+        </div>
+        <button class="quiz-next-right-button quiz-button quiz-next-button">
+          Next
+        </button>
+      </div>
+      <div class="quiz-sticky-incorrect-container">
+        <div class="quiz-sticky-incorrect-info">
+          <h3 class="quiz-sticky-incorrect-h3">Correct Answer:</h3>
+          <p class="quiz-sticky-incorrect-answer-p">Hola</p>
+        </div>
+        <button class="quiz-next-wrong-button quiz-button quiz-next-button">
+          Next
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
