@@ -300,7 +300,7 @@ const lessonData = {
 };
 
 const lessonContentAll = document.querySelector(".lesson-content-all");
-const lessoncCourseNameH1 = document.querySelector(".lesson-course-name-h1");
+const lessonCourseNameH1 = document.querySelector(".lesson-course-name-h1");
 const lessonCompleteH2 = document.querySelector(".lesson-complete-h2");
 const lessonAccuracyH2 = document.querySelector(".lesson-accuracy-h2");
 const lessonContainer = document.querySelector(".lesson-bottom-div");
@@ -312,11 +312,14 @@ const checkButton = document.querySelector(".quick-check-button");
 const quizQuestion = document.querySelector(".quiz-question");
 const quizQuestionCounter = document.querySelector(".question-counter");
 const quizQuestionText = document.querySelector(".question-text");
+const quizFinishedOverview = document.querySelector(".quiz-finished-overview");
 
 const questionAnswer1 = document.querySelector(".question-answer-text-1");
 const questionAnswer2 = document.querySelector(".question-answer-text-2");
 const questionAnswer3 = document.querySelector(".question-answer-text-3");
 const questionAnswer4 = document.querySelector(".question-answer-text-4");
+
+lessonCourseNameH1.textContent = lessonData.name;
 
 const loadLessonPage = function () {
   const quizzesNum = lessonData.allQuestions.length;
@@ -397,6 +400,21 @@ const displayQuestion = function (
   quizData,
   numTotalQuestions
 ) {
+  if (currentQuestion > 10) {
+    quizContainer.style.display = "none";
+    quizFinishedOverview.style.display = "block";
+    const accuracy = correctQuestions / numTotalQuestions;
+    const accPercentage =
+      (correctQuestions / numTotalQuestions).toFixed(3) * 100;
+    document.querySelector(
+      ".lesson-finished-percentage-h2"
+    ).textContent = `${accPercentage}%`;
+    document.querySelector(
+      ".lesson-finished-percentage-p"
+    ).textContent = `${correctQuestions} out of ${numTotalQuestions} correct`;
+    return;
+  }
+  console.log(correctQuestions, incorrectQuestions, numTotalQuestions);
   questionAnswer1.textContent =
     questionAnswer2.textContent =
     questionAnswer3.textContent =
@@ -460,6 +478,8 @@ const checkAnswer = function (
     correctQuestions++;
     document.querySelector(".quiz-sticky-correct-container").style.display =
       "block";
+    document.querySelector(".quiz-sticky-incorrect-container").style.display =
+      "none";
     document
       .querySelector(`.quiz-next-right-button`)
       .addEventListener("click", function (e) {
@@ -477,6 +497,8 @@ const checkAnswer = function (
     incorrectQuestions++;
     document.querySelector(".quiz-sticky-incorrect-container").style.display =
       "block";
+    document.querySelector(".quiz-sticky-correct-container").style.display =
+      "none";
     document.querySelector(".quiz-sticky-incorrect-answer-p").textContent =
       correctAnswer.charAt(0).toUpperCase() + correctAnswer.slice(1);
     document
