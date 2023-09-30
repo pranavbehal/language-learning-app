@@ -414,7 +414,7 @@ const displayQuestion = function (
     ).textContent = `${correctQuestions} out of ${numTotalQuestions} correct`;
     return;
   }
-  console.log(correctQuestions, incorrectQuestions, numTotalQuestions);
+  // console.log(correctQuestions, incorrectQuestions, numTotalQuestions);
   questionAnswer1.textContent =
     questionAnswer2.textContent =
     questionAnswer3.textContent =
@@ -471,8 +471,8 @@ const checkAnswer = function (
   let correctAnswer = quizData.questions[currentQuestion - 1].correctAnswer;
   let chosenAnswer =
     quizData.questions[currentQuestion - 1].choices[answerNumClicked - 1];
-  console.log(chosenAnswer, correctAnswer);
-  console.log("test1");
+  // console.log(chosenAnswer, correctAnswer);
+  // console.log("test1");
 
   if (correctAnswer === chosenAnswer) {
     correctQuestions++;
